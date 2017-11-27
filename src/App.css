@@ -1,28 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ccc;
+  font-family: Lato, sans-serif;
+}
+
+#root {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.MessageBox {
+  display: flex;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0,0,0,.8);
+  position: fixed;
+}
+
 .App {
-  text-align: center;
+  display: inline-flex;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.InfoPanel {
+  background: rgba(180,180,180,.8);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.InfoPanel button {
+  border: 1px solid rgba(33,33,33,.6);
+  background: #fbf;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: box-shadow .3s;
 }
 
-.App-title {
-  font-size: 1.5em;
+.InfoPanel button:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.6); 
 }
 
-.App-intro {
-  font-size: large;
+.Board {
+  display: flex;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 300px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.BoardItem {
+  border-radius: 100%;
+  border: 1px solid rgba(0,0,0,.3);
+  display: inline-block;
+  height: 100px;
+  pointer-events: none;
+  width: 100px;
+}
+
+.BoardItem.is-transparent {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.BoardItem.is-white {
+  background: white;
+}
+
+.BoardItem.is-black {
+  background: black;
 }
