@@ -1,4 +1,4 @@
-const currentIndex = (state = 0, action) => {
+const currentRound = (state = 0, action) => {
   switch (action.type) {
     case 'RESET_GAME':
       return 0;
@@ -9,4 +9,4 @@ const currentIndex = (state = 0, action) => {
   }
 }
 
-export default currentIndex;
+export default currentRound;

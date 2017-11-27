@@ -5,8 +5,8 @@ import InfoPanel from '../components/InfoPanel.js';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    showResetButton: state.currentIndex > 0,
-    currentPlayer: (state.currentIndex % 2) ? 'black' : 'white',
+    showResetButton: state.currentRound > 0,
+    currentPlayer: state.currentPlayer,
   };
 };
 

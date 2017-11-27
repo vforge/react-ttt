@@ -8,12 +8,15 @@ const board = (state = [], action) => {
       const index = action.index;
 
       // already taken, skip
-      if (currentBoard.indexOf(index) !== -1) {
+      if (currentBoard.some(item => item.index === index)) {
         return state;
       }
 
       // can be marked, valid
-      currentBoard.push(index);
+      currentBoard.push({
+        index,
+        player: action.player
+      });
       
       return currentBoard;
     default:

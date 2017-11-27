@@ -29,29 +29,26 @@ function validateWin(board) {
 }
 
 function divideBoard(board) {
-  const white = [];
-  const black = [];
+  const dividedBoards ={
+    black: [],
+    white: [],
+  };
   
-  board.forEach((item, index) => {
-    if (index % 2) {
-      black.push(item);
-    } else {
-      white.push(item);
-    }
+  board.forEach((item) => {
+    dividedBoards[item.player].push(item.index);
   })
   
-  return [white, black];
+  return dividedBoards;
 }
 
 function validateBoard(currentState, board) {
-  // @FIXME
-  const [playerWhite, playerBlack] = divideBoard(board);
+  const dividedBoards = divideBoard(board);
   
-  if (validateWin(playerWhite)) {
+  if (validateWin(dividedBoards.white)) {
     return 'WHITE_WON';
   }
   
-  if (validateWin(playerBlack)) {
+  if (validateWin(dividedBoards.black)) {
     return 'BLACK_WON';
   }
   

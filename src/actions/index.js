@@ -1,7 +1,8 @@
-export const playerMove = (index) => (
+export const playerMove = (index, player) => (
   {
     type: 'PLAYER_MOVE',
     index,
+    player,
   }
 );
 

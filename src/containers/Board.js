@@ -10,14 +10,14 @@ const emptyColors = [
 ];
 
 const mapStateToProps = (state, ownProps) => {
-  let colors = emptyColors.slice(0);
-  let counter = 0;
+  const colors = emptyColors.slice(0);
   
   state.board.forEach((item) => {
-    colors[item] = (counter++ % 2) ? 'black' : 'white';
+    colors[item.index] = item.player;
   });
 
   return {
+    currentPlayer: state.currentPlayer,
     colors,
     board: state.board,
   };
@@ -25,11 +25,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => (
   {
-    onClick: (index, board) => {
-      const newBoard = board.slice(0);
-      newBoard.push(index);
-      
-      dispatch(playerMove(index));
+    onClick: (index, player, newBoard) => {
+      dispatch(playerMove(index, player));
       dispatch(validateBoard(newBoard));
     },
   }
