@@ -15,6 +15,8 @@ const mapStateToProps = (state, ownProps) => {
   state.board.forEach((item) => {
     colors[item.index] = item.player;
   });
+  
+  console.log(state);
 
   return {
     currentPlayer: state.currentPlayer,

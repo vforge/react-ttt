@@ -6,6 +6,13 @@ export const playerMove = (index, player) => (
   }
 );
 
+export const aiMove = (player) => (
+  {
+    type: 'AI_MOVE',
+    player,
+  }
+);
+
 export const validateBoard = (board) => (
   {
     type: 'VALIDATE_BOARD',

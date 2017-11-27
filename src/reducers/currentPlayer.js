@@ -8,6 +8,7 @@ const currentPlayer = (state = 'white', action) => {
       currentPlayerColor = 'white'
       
       return currentPlayerColor;
+    case 'AI_MOVE':
     case 'PLAYER_MOVE':
       currentPlayerColor = nextPlayer(currentPlayerColor);
       

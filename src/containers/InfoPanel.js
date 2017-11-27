@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { resetGame } from '../actions/index.js';
+import { resetGame, aiMove } from '../actions/index.js';
 import InfoPanel from '../components/InfoPanel.js';
 
 const mapStateToProps = (state, ownProps) => {
@@ -12,8 +12,11 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => (
   {
-    onClick: () => {
+    onResetClick: () => {
       dispatch(resetGame())
+    },
+    onAiClick: (player) => {
+      dispatch(aiMove(player))
     },
   }
 )

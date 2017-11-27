@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InfoPanel = ({ currentPlayer, showResetButton, onClick }) => {
+const InfoPanel = ({ currentPlayer, showResetButton, onResetClick, onAiClick }) => {
   const resetButton = showResetButton ? 
-    <button onClick={onClick}>{'RESET'}</button> :
+    <button onClick={onResetClick}>{'RESET'}</button> :
     '';
     
   const style = {
@@ -11,18 +11,16 @@ const InfoPanel = ({ currentPlayer, showResetButton, onClick }) => {
   };
   
   return <div className='InfoPanel'>
-      <div>
-        {'Next move:'}
-      </div>
+      <div>{'Next move:'}</div>
       <div className='player' style={style}></div>
-      <div>
-        {resetButton}
-      </div>
+      <div><button onClick={() => onAiClick(currentPlayer)}>{'AI'}</button></div>
+      <div>{resetButton}</div>
     </div>;
 }
 
 InfoPanel.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onResetClick: PropTypes.func.isRequired,
+  onAiClick: PropTypes.func.isRequired,
   showResetButton: PropTypes.bool.isRequired,
   currentPlayer: PropTypes.string.isRequired,
 };
