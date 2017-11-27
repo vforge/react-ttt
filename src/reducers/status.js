@@ -1,6 +1,6 @@
 import { divideBoard, validateWin, validateDraw } from '../utils/boardValidation.js';
 
-function validateBoard(currentState, board) {
+export function validateBoard(board) {
   const dividedBoards = divideBoard(board);
   
   if (validateWin(dividedBoards.white)) {
@@ -22,8 +22,6 @@ const status = (state = 'IN_PLAY', action) => {
   switch (action.type) {
     case 'RESET_GAME':
       return 'IN_PLAY';
-    case 'VALIDATE_BOARD':
-      return validateBoard(state, action.board);
     default:
       return state
   }

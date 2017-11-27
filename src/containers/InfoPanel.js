@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import { resetGame, aiMove } from '../actions/index.js';
+import { resetGame, aiMove, validateBoard } from '../actions/index.js';
 import InfoPanel from '../components/InfoPanel.js';
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => (
     },
     onAiClick: (player) => {
       dispatch(aiMove(player))
+      dispatch(validateBoard())
     },
   }
 )

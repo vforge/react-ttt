@@ -16,20 +16,17 @@ const mapStateToProps = (state, ownProps) => {
     colors[item.index] = item.player;
   });
   
-  console.log(state);
-
   return {
     currentPlayer: state.currentPlayer,
     colors,
-    board: state.board,
   };
 };
 
 const mapDispatchToProps = dispatch => (
   {
-    onClick: (index, player, newBoard) => {
+    onClick: (index, player) => {
       dispatch(playerMove(index, player));
-      dispatch(validateBoard(newBoard));
+      dispatch(validateBoard());
     },
   }
 )
