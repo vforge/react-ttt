@@ -7,6 +7,7 @@ const Board = ({ currentPlayer, board, colors, onClick }) => {
   const items = [];
   
   for (let index = 0; index < 9; index++) {
+    // this will be our new board
     const newBoard = board.slice(0);
     newBoard.push({
       index,
