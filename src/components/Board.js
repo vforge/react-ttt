@@ -3,12 +3,17 @@ import PropTypes from 'prop-types';
 
 import BoardItem from './BoardItem.js';
 
-const Board = ({ board, onClick }) => {
+const Board = ({ colors, board, onClick }) => {
   const items = [];
   
   for (let index = 0; index < 9; index++) {
     items.push(
-      <BoardItem key={index} color={board[index]} onClick={() => onClick(index)} />
+      <BoardItem
+        key={index}
+        index={index}
+        color={colors[index]}
+        onClick={() => onClick(index, board)}
+      />
     );
   }
   
@@ -16,12 +21,8 @@ const Board = ({ board, onClick }) => {
 }
 
 Board.propTypes = {
-  board: PropTypes.arrayOf(
-    PropTypes.string
-    // PropTypes.shape({
-    //   color: PropTypes.string.isRequired,
-    // }).isRequired
-  ).isRequired,
+  colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  board: PropTypes.arrayOf(PropTypes.number).isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

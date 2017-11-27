@@ -14,13 +14,26 @@ body {
 }
 
 .MessageBox {
-  display: flex;
-  top: 20px;
-  left: 20px;
-  bottom: 20px;
-  right: 20px;
+  align-items: center;
   background: rgba(0,0,0,.8);
+  bottom: 20px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 20px;
   position: fixed;
+  right: 20px;
+  top: 20px;
+}
+
+.MessageBox div {
+  font-size: 42px;
+}
+
+.MessageBox span {
+  opacity: .5;
 }
 
 .App {
@@ -59,12 +72,17 @@ body {
 }
 
 .BoardItem {
+  align-items: center;
   border-radius: 100%;
-  border: 1px solid rgba(0,0,0,.3);
-  display: inline-block;
-  height: 100px;
+  box-shadow: 0 0 2px #666; 
+  color: #666;
+  display: flex;
+  font-size: 24px;
+  height: 90px;
+  justify-content: center;
+  margin: 5px;
   pointer-events: none;
-  width: 100px;
+  width: 90px;
 }
 
 .BoardItem.is-transparent {
@@ -74,8 +92,10 @@ body {
 
 .BoardItem.is-white {
   background: white;
+  box-shadow: 0 0 2px white; 
 }
 
 .BoardItem.is-black {
   background: black;
+  box-shadow: 0 0 2px black; 
 }

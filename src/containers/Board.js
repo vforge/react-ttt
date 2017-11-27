@@ -3,30 +3,34 @@ import { connect } from 'react-redux';
 import { playerMove, validateBoard } from '../actions/index.js';
 import Board from '../components/Board.js';
 
-const emptyBoard = [
+const emptyColors = [
   'transparent', 'transparent', 'transparent', 
   'transparent', 'transparent', 'transparent', 
   'transparent', 'transparent', 'transparent',
 ];
 
 const mapStateToProps = (state, ownProps) => {
-  let board = emptyBoard.slice(0);
+  let colors = emptyColors.slice(0);
   let counter = 0;
   
   state.board.forEach((item) => {
-    board[item] = (counter++ % 2) ? 'black' : 'white';
+    colors[item] = (counter++ % 2) ? 'black' : 'white';
   });
 
   return {
-    board,
+    colors,
+    board: state.board,
   };
 };
 
 const mapDispatchToProps = dispatch => (
   {
-    onClick: (index) => {
+    onClick: (index, board) => {
+      const newBoard = board.slice(0);
+      newBoard.push(index);
+      
       dispatch(playerMove(index));
-      dispatch(validateBoard());
+      dispatch(validateBoard(newBoard));
     },
   }
 )
