@@ -4,7 +4,6 @@ import Board from './containers/Board.js';
 import InfoPanel from './containers/InfoPanel.js';
 import MessageBox from './containers/MessageBox.js';
 
-// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {

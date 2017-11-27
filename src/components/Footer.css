@@ -1,0 +1,17 @@
+.Footer {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: bold;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  right: 0;
+}
+
+.Footer span,
+.Footer a {
+  font-weight: normal;
+}

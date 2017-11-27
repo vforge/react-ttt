@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #ccc;
+  font-family: Lato, sans-serif;
+}
+
+#root {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

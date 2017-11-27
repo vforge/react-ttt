@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './MessageBox.css';
+
 const MessageBox = ({ message, onClick }) => {
   if (!message.length) {
     return '';

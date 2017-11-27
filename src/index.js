@@ -6,6 +6,10 @@ import tttApp from './reducers/index';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
+import Footer from './components/Footer.js';
+
+import './index.css';
+
 const store = createStore(
   tttApp,
   {
@@ -17,9 +21,12 @@ const store = createStore(
 );
 
 render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <div>
+    <Provider store={store}>
+      <App />
+    </Provider>
+    <Footer />
+  </div>,
   document.getElementById('root'));
 
 registerServiceWorker();

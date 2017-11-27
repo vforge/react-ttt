@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import BoardItem from './BoardItem.js';
+import './Board.css';
 
 const Board = ({ currentPlayer, colors, onClick }) => {
   const items = [];

@@ -1,0 +1,28 @@
+.BoardItem {
+  align-items: center;
+  border-radius: 100%;
+  box-shadow: 0 0 2px #666; 
+  color: #666;
+  display: flex;
+  font-size: 24px;
+  height: 90px;
+  justify-content: center;
+  margin: 5px;
+  pointer-events: none;
+  width: 90px;
+}
+
+.BoardItem.is-transparent {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.BoardItem.is-white {
+  background: white;
+  box-shadow: 0 0 2px white; 
+}
+
+.BoardItem.is-black {
+  background: black;
+  box-shadow: 0 0 2px black; 
+}

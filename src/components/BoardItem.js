@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './BoardItem.css';
+
 const BoardItem = ({ index, onClick, color }) => {
   const className = `BoardItem is-${color}`;
   

@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import './InfoPanel.css';
+
 const InfoPanel = ({ currentPlayer, showResetButton, onResetClick, onAiClick }) => {
   const resetButton = showResetButton ? 
     <button onClick={onResetClick}>{'RESET'}</button> :
