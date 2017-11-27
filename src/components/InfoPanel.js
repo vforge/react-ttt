@@ -5,12 +5,16 @@ const InfoPanel = ({ currentPlayer, showResetButton, onClick }) => {
   const resetButton = showResetButton ? 
     <button onClick={onClick}>{'RESET'}</button> :
     '';
+    
+  const style = {
+    backgroundColor: currentPlayer
+  };
   
   return <div className='InfoPanel'>
       <div>
-        {'Current Player: '}
-        {currentPlayer}
+        {'Next move:'}
       </div>
+      <div className='player' style={style}></div>
       <div>
         {resetButton}
       </div>
