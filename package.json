@@ -5,8 +5,8 @@
   "homepage": "http://vforge.github.io/react-ttt",
   "dependencies": {
     "prop-types": "15.6.0",
-    "react": "16.1.1",
-    "react-dom": "16.1.1",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
     "react-redux": "5.0.6",
     "react-scripts": "1.0.17",
     "redux": "3.7.2"
