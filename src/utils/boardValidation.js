@@ -28,9 +28,9 @@ export function validateWin(board) {
 }
 
 export function divideBoard(board) {
-  const dividedBoards ={
-    black: [],
-    white: [],
+  const dividedBoards = {
+    1: [],
+    2: [],
   };
   
   board.forEach((item) => {

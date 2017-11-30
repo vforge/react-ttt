@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { getPlayerColor } from '../utils/players.js';
+
 import './InfoPanel.css';
 
 const InfoPanel = ({ currentPlayer, showResetButton, onResetClick, onAiClick }) => {
@@ -9,7 +11,7 @@ const InfoPanel = ({ currentPlayer, showResetButton, onResetClick, onAiClick }) 
     '';
     
   const style = {
-    backgroundColor: currentPlayer
+    backgroundColor: getPlayerColor(currentPlayer),
   };
   
   return <div className='InfoPanel'>
@@ -24,7 +26,7 @@ InfoPanel.propTypes = {
   onResetClick: PropTypes.func.isRequired,
   onAiClick: PropTypes.func.isRequired,
   showResetButton: PropTypes.bool.isRequired,
-  currentPlayer: PropTypes.string.isRequired,
+  currentPlayer: PropTypes.number.isRequired,
 };
 
 export default InfoPanel;

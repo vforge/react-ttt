@@ -2,13 +2,14 @@ import { divideBoard, validateWin, validateDraw } from '../utils/boardValidation
 
 export function validateBoard(board) {
   const dividedBoards = divideBoard(board);
+  console.log(dividedBoards);
   
-  if (validateWin(dividedBoards.white)) {
-    return 'WHITE_WON';
+  if (validateWin(dividedBoards[1])) {
+    return '1_WON';
   }
   
-  if (validateWin(dividedBoards.black)) {
-    return 'BLACK_WON';
+  if (validateWin(dividedBoards[2])) {
+    return '2_WON';
   }
   
   if (validateDraw(board)) {

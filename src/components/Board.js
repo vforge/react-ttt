@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import BoardItem from './BoardItem.js';
 import './Board.css';
 
-const Board = ({ currentPlayer, colors, onClick }) => {
+const Board = ({ currentPlayer, boardState, onClick }) => {
   const items = [];
   
   for (let index = 0; index < 9; index++) {
@@ -12,7 +12,7 @@ const Board = ({ currentPlayer, colors, onClick }) => {
       <BoardItem
         key={index}
         index={index}
-        color={colors[index]}
+        state={boardState[index]}
         onClick={() => onClick(index, currentPlayer)}
       />
     );
@@ -22,8 +22,8 @@ const Board = ({ currentPlayer, colors, onClick }) => {
 }
 
 Board.propTypes = {
-  currentPlayer: PropTypes.string.isRequired,
-  colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+  currentPlayer: PropTypes.number.isRequired,
+  boardState: PropTypes.arrayOf(PropTypes.number).isRequired,
   onClick: PropTypes.func.isRequired,
 };
 

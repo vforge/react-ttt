@@ -1,18 +1,12 @@
-import nextPlayer from '../utils/nextPlayer.js';
+import {getNextPlayer, getRandomPlayer} from '../utils/players.js';
 
-let currentPlayerColor = 'white';
-
-const currentPlayer = (state = 'white', action) => {
+const currentPlayer = (state = getRandomPlayer(), action) => {
   switch (action.type) {
     case 'RESET_GAME':
-      currentPlayerColor = 'white'
-      
-      return currentPlayerColor;
+      return getRandomPlayer();
     case 'AI_MOVE':
     case 'PLAYER_MOVE':
-      currentPlayerColor = nextPlayer(currentPlayerColor);
-      
-      return currentPlayerColor;
+      return getNextPlayer(state);
     default:
       return state
   }

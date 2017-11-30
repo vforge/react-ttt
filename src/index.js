@@ -8,13 +8,15 @@ import registerServiceWorker from './registerServiceWorker';
 
 import Footer from './components/Footer.js';
 
+import {getRandomPlayer} from './utils/players.js';
+
 import './index.css';
 
 const store = createStore(
   tttApp,
   {
     currentRound: 0,
-    currentPlayer: 'white',
+    currentPlayer: getRandomPlayer(),
     board: [],
   },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
