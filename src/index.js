@@ -23,7 +23,7 @@ const store = createStore(
 );
 
 render(
-  <div>
+  <div class="index">
     <Provider store={store}>
       <App />
     </Provider>

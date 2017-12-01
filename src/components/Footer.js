@@ -4,10 +4,8 @@ import './Footer.css';
 
 const Footer = () => (
   <div className="Footer">
-    React Tic-Tac-Toe <span>&copy; 2017 Bartosz V. Bentkowski</span>
-    <a href="https://github.com/vforge/react-ttt">
-      https://github.com/vforge/react-ttt
-    </a>
+    <a href="https://github.com/vforge/react-ttt">React/Redux Tic-Tac-Toe Kata</a>
+    <span>&copy; 2017 Bartosz V. Bentkowski</span>
   </div>
 )
 

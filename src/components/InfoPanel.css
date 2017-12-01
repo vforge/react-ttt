@@ -1,30 +1,37 @@
 .InfoPanel {
   align-items: center;
-  background: rgba(180,180,180,.8);
   border-radius: 6px;
   display: flex;
   flex-direction: column;
-  margin: 10px;
-  padding: 10px;
+}
+
+.InfoPanel > * {
+  border-radius: 100%;
+  font-size: 18px;
+  height: 90px;
+  margin: 5px;
+  width: 90px;
 }
 
 .InfoPanel .player {
-  height: 80px;
-  width: 36px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-.InfoPanel div {
-  margin-bottom: 12px;
+.InfoPanel .player div {
+  font-size: 12px;
 }
 
 .InfoPanel button {
-  background: #fbf;
-  border-radius: 0;
-  border: 1px solid rgba(33,33,33,.6);
+  background: #aaa;
+  border-radius: 100%;
+  border: 0;
   color: #000;
   cursor: pointer;
   outline: 0;
-  padding: 10px 20px;
+  width: 90px;
+  height: 90px;
   transition: box-shadow .3s;
 }
 

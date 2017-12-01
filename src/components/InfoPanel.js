@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getPlayerColor } from '../utils/players.js';
+import { getPlayerColor, getPlayerName } from '../utils/players.js';
 
 import './InfoPanel.css';
 
@@ -15,10 +15,13 @@ const InfoPanel = ({ currentPlayer, showResetButton, onResetClick, onAiClick }) 
   };
   
   return <div className='InfoPanel'>
-      <div>{'Next move:'}</div>
-      <div className='player' style={style}></div>
-      <div><button onClick={() => onAiClick(currentPlayer)}>{'AI'}</button></div>
-      <div>{resetButton}</div>
+      <div className='player' style={style}>
+        <div>&#x21E8;</div>
+        {getPlayerName(currentPlayer)}
+        <div>&#x21E6;</div>
+      </div>
+      <button onClick={() => onAiClick(currentPlayer)}>{'AI'}</button>
+      {resetButton}
     </div>;
 }
 
