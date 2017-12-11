@@ -1,3 +1,29 @@
 .About {
-  
+  align-items: center;
+  color: #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.AboutDescription,
+.AboutLink {
+  margin-bottom: 6px;
+}
+
+.AboutCopyright {
+  font-size: .7rem;
+  margin: 12px 0;
+}
+
+.AboutLink {
+  opacity: .5;
+}
+
+.AboutLink a {
+  color: inherit;
+}
+
+.AboutOk {
+  margin-top: 12px;
 }
