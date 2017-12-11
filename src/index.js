@@ -1,5 +1,6 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import tttApp from './reducers/index';
@@ -23,12 +24,11 @@ const store = createStore(
 );
 
 render(
-  <div class="index">
+  <BrowserRouter>
     <Provider store={store}>
       <App />
     </Provider>
-    <Footer />
-  </div>,
+  </BrowserRouter>,
   document.getElementById('root'));
 
 registerServiceWorker();

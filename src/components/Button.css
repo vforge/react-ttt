@@ -1,0 +1,17 @@
+.Button {
+  align-items: center;
+  background: #eee;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0);
+  color: #333; 
+  display: inline-flex;
+  height: 40px;
+  justify-content: center;
+  margin: 5px;
+  transition-duration: .2s;
+  width: 120px;
+}
+
+.Button:hover {
+  box-shadow: 0 0 10px rgba(255, 0, 255, 1);
+  color: #000; 
+}
