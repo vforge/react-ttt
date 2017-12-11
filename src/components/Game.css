@@ -1,5 +1,15 @@
 .Game {
-  display: inline-flex;
-  flex-grow: 1;
-  padding: 32px 0;
+  display: flex;
+}
+
+@media only screen and (orientation: landscape) {
+  .Game {
+    flex-direction: row;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .Game {
+    flex-direction: column;
+  }
 }

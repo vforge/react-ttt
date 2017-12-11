@@ -7,8 +7,6 @@ import tttApp from './reducers/index';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-import Footer from './components/Footer.js';
-
 import {getRandomPlayer} from './utils/players.js';
 
 import './index.css';

@@ -1,10 +1,10 @@
 .BoardItem {
   align-items: center;
   border-radius: 100%;
-  border: 5px solid;
-  color: #bbb;
+  border: 5px solid #222;
+  color: #222;
   display: flex;
-  font-size: 24px;
+  font-size: 48px;
   height: 90px;
   justify-content: center;
   margin: 5px;

@@ -1,10 +1,10 @@
 const PLAYERS = {
   1: {
-    name: 'ORANGE',
+    name: 'X',
     color: '#e69f00',
   },
   2: {
-    name: 'BLUE',
+    name: 'O',
     color: '#56b4e9',
   },
 };
