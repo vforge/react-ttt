@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getPlayerColor, getPlayerName } from '../utils/players.js';
-
 import ClickableButton from './ClickableButton.js';
 
 import './InfoPanel.css';

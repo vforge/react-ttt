@@ -21,8 +21,10 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
+const basename = window.location.hostname === 'vforge.github.io' ? '/react-ttt' : '';
+
 render(
-  <BrowserRouter>
+  <BrowserRouter basename={basename}>
     <Provider store={store}>
       <App />
     </Provider>

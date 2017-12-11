@@ -8,7 +8,7 @@ import './Start.css';
 
 const Start = () => (
   <div className="Start">
-    <img className="StartImage" src="/favicon-128.png" alt="" />
+    <img className="StartImage" src="https://vforge.github.io/react-ttt/favicon-128.png" alt="" />
     <h1 className="StartTitle">Tic-Tac-Toe</h1>
     <div className="StartMenu">
       <Link to="/game" style={destyleLink}>
