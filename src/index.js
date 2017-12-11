@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import tttApp from './reducers/index';
+import reducers from './reducers/index';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -12,7 +12,7 @@ import {getRandomPlayer} from './utils/players.js';
 import './index.css';
 
 const store = createStore(
-  tttApp,
+  reducers,
   {
     currentRound: 0,
     currentPlayer: getRandomPlayer(),
