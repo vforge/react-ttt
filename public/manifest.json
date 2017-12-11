@@ -3,6 +3,11 @@
   "name": "React Tic-Tac-Toe",
   "icons": [
     {
+      "src": "splashscreen.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
       "src": "favicon-196x196.png",
       "sizes": "196x196",
       "type": "image/png"
@@ -31,8 +36,7 @@
       "src": "favicon.ico",
       "sizes": "128x128 96x96 32x32 24x24 16x16",
       "type": "image/x-icon"
-    },
-    
+    }
   ],
   "start_url": "./index.html",
   "display": "standalone",
