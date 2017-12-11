@@ -6,13 +6,9 @@ import ClickableButton from './ClickableButton.js';
 import './InfoPanel.css';
 
 const InfoPanel = ({ currentPlayer, showResetButton, onResetClick, onAiClick }) => {
-  const resetButton = showResetButton ? 
-    <ClickableButton content='RESET' onClick={onResetClick} /> :
-    '';
-  
   return <div className='InfoPanel'>
       <ClickableButton content='AI' onClick={() => onAiClick(currentPlayer)} />
-      {resetButton}
+      <ClickableButton content='RESET' isHidden={!showResetButton} onClick={onResetClick} />
     </div>;
 }
 
